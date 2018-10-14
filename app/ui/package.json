@@ -1,0 +1,42 @@
+{
+  "name": "cabs-lavie-ui",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "start": "webpack-dev-server --mode development",
+    "build": "del dist && webpack --mode production"
+  },
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.9",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-loader": "0.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "img-loader": "^3.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "tslint": "~5.8.0",
+    "typescript": "~2.8.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "private": true
+}
