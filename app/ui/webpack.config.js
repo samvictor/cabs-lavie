@@ -9,7 +9,7 @@ const basePath = __dirname;
 var config = {
 	context: path.join(basePath, 'src'),
 	resolve: {
-		extensions: ['.tsx','.js']
+		extensions: ['.tsx', '.ts','.js']
 	},
 	entry: './index.tsx',
 	output: {
