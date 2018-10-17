@@ -7,7 +7,8 @@ interface IProps {
 
 interface IDispatchProps {
   incrementLoadingState:() => any,
-  decrementLoadingState:() => any
+  decrementLoadingState:() => any,
+  incrementTwice: () => any
 };
 
 type IAllProps = IProps & IDispatchProps;
@@ -19,7 +20,7 @@ class App extends React.Component<IAllProps,any> {
   }
 
   private incrementNumber(){
-    this.props.incrementLoadingState();
+    this.props.incrementTwice();
   };
 
   renderSpinner(){
