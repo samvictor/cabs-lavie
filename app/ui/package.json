@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "tslint --project tsconfig.json",
     "start": "webpack-dev-server --mode development",
-    "build": "del dist && webpack --mode production"
+    "build": "webpack --mode production"
   },
   "main": "src/index.tsx",
   "dependencies": {
@@ -20,8 +20,10 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@types/request": "^2.47.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
     "html-webpack-loader": "0.0.5",

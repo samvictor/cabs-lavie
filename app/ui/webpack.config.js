@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const basePath = __dirname;
 
@@ -73,7 +74,8 @@ var config = {
 		new MiniCssExtractPlugin({
 			filename: "[name].css",
 			chunkFilename: "[id].[hash].css"
-		})
+		}),
+		new CleanWebpackPlugin(['dist', 'build/*.*'], {root: __dirname})
 	]
 };
 
