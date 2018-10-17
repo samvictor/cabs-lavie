@@ -39,6 +39,7 @@ class App extends React.Component<IAllProps,any> {
         <div className="bordered-button" onClick={this.incrementNumber}> Click me!</div>
         <div className="loading-counter">{loadingState}</div>
         {spinner}  
+        It works for sam again!
       </div>
 
     );
