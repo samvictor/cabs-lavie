@@ -20,7 +20,7 @@ class App extends React.Component<IAllProps,any> {
     super(props);
     autoBind(this);
     
-    var config = {
+    const config = {
       apiKey: "AIzaSyARw_MQFNy0G_E6ng_oKVBCOeC1HrBNuTo",
       authDomain: "cabs-lavie.firebaseapp.com",
       databaseURL: "https://cabs-lavie.firebaseio.com",
@@ -38,7 +38,7 @@ class App extends React.Component<IAllProps,any> {
   }
   
   componentDidMount() {
-    let db = firebase.firestore();
+    const db = firebase.firestore();
     const settings = {/* your settings... */ timestampsInSnapshots: true};
     db.settings(settings);
     
@@ -46,7 +46,7 @@ class App extends React.Component<IAllProps,any> {
     //if (typeof page === 'undefined' || page === '')
     //  page = 'home';
 
-    let items_ref = db.collection('inventory').where('key', '>=', 'item1');
+    const items_ref = db.collection('inventory').where('key', '>=', 'item1');
     
     items_ref.get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -55,7 +55,7 @@ class App extends React.Component<IAllProps,any> {
             
             doc.data();
             
-            let temp_data = this.state.data;
+            const temp_data = this.state.data;
             temp_data[doc.data().key] = doc.data();
             
             this.setState({'data': temp_data});
@@ -69,12 +69,13 @@ class App extends React.Component<IAllProps,any> {
         });
         
         this.setState({'data_loading': false});
-        //.catch((error) => {
-         //   console.log("Error getting document:", error);
+        //
+      })
+      .catch((error) => {
+            console.log("Error getting document:", error);
             //$('#alert_danger').text('Error').fadeIn().delay(2000).fadeOut();
             
-         //   this.setState({'data': null, 'data_loading': false});    
-        //});
+            this.setState({'data': null, 'data_loading': false});    
       });
 
   }
